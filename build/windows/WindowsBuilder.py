@@ -17,7 +17,7 @@ class WindowsFolderBuilder:
     """
 
     # Constants
-    URL_PIP     = r'https://bootstrap.pypa.io/get-pip.py'
+    URL_PIP     = r'https://bootstrap.pypa.io/pip/3.8/get-pip.py'
     URL_VSCODE  = r'https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-archive'
     URL_FFMPEG  = r'https://github.com/GyanD/codexffmpeg/releases/download/4.4/ffmpeg-4.4-full_build.zip'
     URL_7ZIP    = r'https://github.com/iperov/DeepFaceLive/releases/download/7za/7za.zip'
@@ -479,6 +479,7 @@ def build_deepfacelive_windows(release_dir, cache_dir, python_ver='3.8.10', back
     builder.install_pip_package('opencv-python==4.8.0.74')
     builder.install_pip_package('opencv-contrib-python==4.8.0.74')
     builder.install_pip_package('pyqt6==6.5.1')
+    builder.install_pip_package('PyQt6-Qt6==6.5.1')
     builder.install_pip_package('onnx==1.14.0')
 
     if backend == 'cuda':
